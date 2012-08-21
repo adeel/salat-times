@@ -1,0 +1,221 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0 0 0 #fff;
+  margin: 0px;
+}
+  h1 {margin: 0px 0px 5px;}
+  p {line-height: 1.2 em;}
+  a {color: blue;}
+  #container {
+    margin: 30px auto;
+    width: 600px;
+    text-align: center;
+    
+    padding: 15px;
+    background: #eee;
+    border: 3px solid #fff;
+
+    -webkit-box-shadow: 0 1px 10px #999;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 7px;
+  }
+    #container table#times {
+      margin: auto;
+      border-collapse: collapse;
+    }
+      #container table#times tr {}
+      #container table#times tr.zebra {
+        background-color: #DDD;
+      }
+        #container table#times td,
+        #container table#times th {
+          width: 100px;
+          padding: 5px;
+          margin: 0;
+        }
+
+form {
+  clear: both;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+  form p {}
+    form p input {
+      background-color: transparent;
+      font-size: 10px;
+      padding: 2px 6px;
+      width: 150px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      text-shadow: 0 0 0 #fff;
+      /*font-size: 1em;*/
+    }
+    form p input.checkbox {
+      width: auto;
+    }
+    form p input#date {
+      border: none;
+      padding: 0px;
+    }
+      form p input:focus {
+        outline: none;
+        background: white;
+      }
+      form p input#date:focus {
+        background: transparent;
+      }
+      form p input.submit:focus {
+        background: transparent;
+      }
+      form p input.error {
+        background: #faa;
+      }
+
+/* Calendar */
+div.timeframe_calendar {
+  display: inline-block;
+  margin: 0px auto;
+  
+  padding: 0;
+  text-align: center;
+  text-shadow: none;
+}
+
+/* Menu */
+div.timeframe_calendar ul.timeframe_menu {
+  list-style-type: none;
+  margin: 0px auto;
+  padding: 0px;
+}
+  div.timeframe_calendar ul.timeframe_menu li {
+    display: inline;
+  }
+    div.timeframe_calendar ul.timeframe_menu li a {
+      display: inline-block;
+      height: 20px;
+      padding: 0;
+      text-decoration: none;
+      width: 20px;
+    }
+        div.timeframe_calendar ul.timeframe_menu li a.previous:hover,
+        div.timeframe_calendar ul.timeframe_menu li a.next:hover {
+          color: black;
+        }
+        div.timeframe_calendar ul.timeframe_menu li a.previous:active,
+        div.timeframe_calendar ul.timeframe_menu li a.next:active {
+          background: #DDD;
+        }
+      div.timeframe_calendar ul.timeframe_menu li a.today {
+        display: none;
+        background: #FFFFCC;
+        color: black;
+      }
+        div.timeframe_calendar ul.timeframe_menu li a.today:hover {
+          background: #FDF9B6;
+        }
+      div.timeframe_calendar ul.timeframe_menu li a.reset {
+        display: none;
+      }
+
+/* Calendar*/
+div.timeframe_calendar table {
+  border-collapse: collapse;
+  display: inline;
+  display: inline-block;
+  font-size: 15px;
+  margin: 0;
+}
+  /* Month names */
+  div.timeframe_calendar table caption {
+    text-shadow: 0 0 0 #fff;
+    padding: 3px;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  /* Cell sizes */
+  div.timeframe_calendar thead th,
+  div.timeframe_calendar tbody td {
+    height: 18px;
+    margin: 0;
+    padding: 3px;
+    width: 20px;
+  }
+  /* Weekday letters */
+  div.timeframe_calendar thead {
+    background: #111;
+    color: white;
+  }
+  /* Days */
+  div.timeframe_calendar tbody {
+    background: #fff;
+  }
+    div.timeframe_calendar tbody td {
+      cursor: pointer;
+    }
+      /* Hover states not available in IE */
+      div.timeframe_calendar tbody td.selectable:hover {
+        background-color: #eee;
+      }
+      div.timeframe_calendar tbody td.selected:hover,
+      div.timeframe_calendar tbody td.stuck:hover {
+        background-color: #111;
+        color: white;
+      }
+      /* Selected states */
+      div.timeframe_calendar tbody td.selected {
+        background-color: #333;
+        color: white;
+      }
+      div.timeframe_calendar tbody td.stuck {
+        background-color: #333;
+        color: white;
+      }
+      /* Today */
+      div.timeframe_calendar tbody td.today {
+        background-color: #FFFFCC;
+        color: black;
+      }
+        div.timeframe_calendar tbody td.today_selected {
+          background-color: #111;
+          color: white;
+        }
+        div.timeframe_calendar tbody td.today_stuck {
+          background-color: #111;
+          color: white;
+        }
+      /* Post/pre-month */
+      div.timeframe_calendar tbody td.beyond {
+        background-color: #aaa;
+        background-image: none;
+        color: #ccc;
+      }
+        div.timeframe_calendar tbody td.beyond_selected {
+          background-color: #999;
+        }
+        div.timeframe_calendar tbody td.beyond_stuck {
+          background-color: #888;
+        }
+      
+      div.timeframe_calendar tbody td.unselectable {
+        color: #DDD;
+        cursor: default;
+      }
+      /* Clear button */
+      div.timeframe_calendar tbody td span.clear {
+        color: transparent;
+        display: block;
+        height: 0;
+        position: absolute;
+        width: 0;
+      }
+        div.timeframe_calendar tbody td span.clear span {
+          cursor: pointer;
+          display: block;
+          height: 30px;
+          left: -18px;
+          position: relative;
+          text-indent: -10000px;
+          top: -18px;
+          width: 30px;
+        }
